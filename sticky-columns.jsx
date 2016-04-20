@@ -7,10 +7,6 @@ const rows = 48;
 const cols = 2;
 
 export default class StickyColumns extends React.Component {
-  shouldComponentUpdate(nextProps) {
-    return this.props.top !== nextProps.top;
-  }
-
   render() {
     return (
       <div className={styles.container}>

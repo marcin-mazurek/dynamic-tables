@@ -15,10 +15,6 @@ export default class Content extends React.Component {
     });
   }
 
-  shouldComponentUpdate() {
-    return false;
-  }
-
   render() {
     return (
       <div className={styles.container}>
