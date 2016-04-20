@@ -13,7 +13,7 @@ export default class StickyHeader extends React.Component {
   render() {
     return (
       <div className={styles.container}>
-        <div className={styles.innerContainer} style={{ marginLeft: -this.props.left }}>
+        <div className={styles.innerContainer}>
           {times(cols, colNumber => <Column key={colNumber}>StickyHeader</Column>)}
         </div>
       </div>

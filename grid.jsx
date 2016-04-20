@@ -3,20 +3,16 @@ import StickyHeader from './sticky-header';
 import StuckHeader from './stuck-header';
 import Content from './content';
 import React from 'react';
+import ReactDOM from 'react-dom';
 import styles from './grid.css';
 
 export default class Grid extends React.Component {
-  constructor() {
-    super();
-    this.handleScroll = this.handleScroll.bind(this);
-    this.state = {
-      top: 0,
-      left: 0
-    };
-  }
-
   handleScroll(top, left) {
-    this.setState({ top, left });
+    const header = ReactDOM.findDOMNode(this.refs.stickyHeader);
+    header.scrollLeft = left;
+
+    const column = ReactDOM.findDOMNode(this.refs.stickyColumn);
+    column.scrollTop = top;
   }
 
   render() {
@@ -24,11 +20,11 @@ export default class Grid extends React.Component {
       <div className={styles.container}>
         <div className={styles.row}>
           <StuckHeader />
-          <StickyHeader left={this.state.left} />
+          <StickyHeader ref="stickyHeader" />
         </div>
         <div className={styles.row}>
-          <StickyColumns top={this.state.top} />
-          <Content onScroll={this.handleScroll} />
+          <StickyColumns ref="stickyColumn" />
+          <Content onScroll={this.handleScroll.bind(this)} />
         </div>
       </div>
     );
