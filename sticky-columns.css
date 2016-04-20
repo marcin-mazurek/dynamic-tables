@@ -1,0 +1,11 @@
+.container {
+  width: 400px;
+  box-shadow: 3px 0px 5px 0px rgba(0,0,0,0.25);
+  height: 725px;
+  overflow: hidden;
+}
+
+.innerContainer {
+  display: flex;
+  flex-wrap: wrap;
+}

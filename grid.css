@@ -1,0 +1,9 @@
+.container {
+  overflow: hidden;
+  width: 6400px;
+}
+
+.row {
+  display: flex;
+  overflow: hidden;
+}

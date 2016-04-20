@@ -25,7 +25,7 @@ module.exports = {
 
 			{
 				test: /\.css$/,
-				loader: 'style!css'
+				loader: 'style!css?modules&importLoaders=1&localIdentName=[hash:base64:5]'
 			},
 			{
 				test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,

@@ -1,0 +1,8 @@
+.container {
+  width: 700px;
+  overflow: hidden;
+}
+
+.innerContainer {
+  display: flex;
+}
