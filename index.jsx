@@ -1,4 +1,4 @@
-import './node_modules/react-virtualized/styles.css';
+import './base_styles.css';
 import './index.css';
 
 import React, { Component, PropTypes } from 'react';
@@ -14,7 +14,7 @@ class App extends Component {
     this.state = {
       columnWidth: 200,
       columnsCount: 15,
-      height: 800,
+      height: 600,
       overscanColumnsCount: 0,
       overscanRowsCount: 5,
       rowHeight: 100,
